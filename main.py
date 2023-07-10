@@ -5,6 +5,8 @@ random.seed()
 # Fix Rook Bash with Malnutrition
 # Finish Addons
 # Make turn switching more obvious
+# Make check to prevent constant king swapping
+# Fix crashing issue
 width, height = 960, 540
 size = 4
 max_rounds = 15
@@ -860,7 +862,9 @@ def setup_game(canvas):
     canvas.delete('all')
     coldbeef = Player("coldbeef", "#ffffff", "EZ", "EZ", "EZ")
     xxdmogxx = Player("xXDMOGXx", "#3cb544", "Suck It!", "Fuck You", "Bitch...")
-    player_list = [coldbeef, xxdmogxx]
+    gappy = Player("Gappy", "#ffffff", "Yaay", "I wasn't trying", "I wasn't trying")
+    flevz = Player("Flevz", "#280137", "Too Good at the game (I'm awesome)", ":RAGE::RAGE::RAGE::RAGE::RAGE::RAGE::RAGE::RAGE::RAGE::RAGE::RAGE::RAGE::RAGE::RAGE::RAGE::RAGE:", "L (I wanted stalemate)")
+    player_list = [gappy, xxdmogxx]
     empty_piece = Piece("Empty", None)
     empty_line = [empty_piece]*size
     field = []
